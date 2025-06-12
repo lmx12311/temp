@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="327" android:versionName="3.2.7" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" platformBuildVersionName="14" platformBuildVersionCode="34" package="com.huiruan.zjt">
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="28"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <queries>
+        <package android:name="com.tencent.mm"/>
+    </queries>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <permission android:name="com.huiruan.zjt.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.huiruan.zjt.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:theme="@style/Theme.ZangJianTong" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.huiruan.zjt.BaseApplication" android:debuggable="false" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="@xml/backup_rules" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true" android:dataExtractionRules="@xml/data_extraction_rules">
+        <activity android:theme="@style/SplashTheme1" android:name="com.huiruan.zjt.activity.SplashActivity" android:exported="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.huiruan.zjt.activity.MainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.activity.WXAuthenticationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:theme="@style/wxTheme11" android:name="com.huiruan.zjt.activity.LoginActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.activity.AttendanceActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.activity.AttendanceInfoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.activity.CommonActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.labormanagement.activity.LaborManagementActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.common.activity.WebActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:theme="@style/wxTheme" android:label="@string/app_name" android:name="com.huiruan.zjt.wxapi.WXEntryActivity" android:exported="true" android:taskAffinity="com.huiruan.zjt" android:launchMode="singleTask"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.huiruan.zjt.fileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider"/>
+        </provider>
+        <meta-data android:name="com.huawei.hms.client.appid" android:value="appid=110466847"/>
+        <meta-data android:name="design_width_in_dp" android:value="360"/>
+        <meta-data android:name="design_height_in_dp" android:value="640"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <meta-data android:name="notch.config" android:value="portrait|landscape"/>
+        <service android:name="com.baidu.location.ServiceC3090f" android:enabled="true" android:process=":remote"/>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="xHxdipgAjOMdCwWiOTQ6d6qh40ncib1e"/>
+        <activity android:name="com.huiruan.p066xz.seetaface_ncnn.FaceActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.labormanagement.activity.ModifyFaceActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.labormanagement.activity.LocationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.labormanagement.activity.WorkerAttendanceActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.labormanagement.activity.WorkerAttendanceInfoActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name="com.huiruan.zjt.labormanagement.activity.CommonActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:theme="@style/EasyPhotosTheme" android:name="com.huantansheng.easyphotos.p065ui.EasyPhotosActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/EasyPhotosFullscreenTheme" android:name="com.huantansheng.easyphotos.p065ui.PreviewActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/EasyPhotosTheme" android:name="com.huantansheng.easyphotos.p065ui.PuzzleActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/EasyPhotosTheme" android:name="com.huantansheng.easyphotos.p065ui.PuzzleSelectorActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <service android:name="com.snail.antifake.jni.EmulatorCheckService" android:process=":EmulatorCheckService"/>
+        <service android:name="com.xuexiang.xupdate.service.DownloadService"/>
+        <provider android:name="com.xuexiang.xupdate.utils.UpdateFileProvider" android:exported="false" android:authorities="com.huiruan.zjt.updateFileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/update_file_paths"/>
+        </provider>
+        <activity android:theme="@style/XUpdate_DialogTheme" android:name="com.xuexiang.xupdate.widget.UpdateDialogActivity"/>
+        <provider android:name="com.luck.picture.lib.basic.PictureFileProvider" android:exported="false" android:authorities="com.huiruan.zjt.luckProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ps_file_paths"/>
+        </provider>
+        <service android:name="com.luck.picture.lib.service.ForegroundService" android:enabled="true" android:foregroundServiceType="location"/>
+        <activity android:theme="@style/Base.Theme.NoActionBar" android:name="com.luck.picture.lib.basic.PictureSelectorSupporterActivity" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Picture.Theme.Translucent" android:name="com.luck.picture.lib.basic.PictureSelectorTransparentActivity" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:name="com.yalantis.ucrop.UCropMultipleActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Base.Theme.NoActionBar" android:name="com.luck.lib.camerax.PictureCameraActivity" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.huiruan.zjt.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="androidx.camera.core.impl.MetadataHolderService" android:enabled="false" android:exported="false">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <activity android:theme="@style/ActivityTranslucent" android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/ActivityTranslucent" android:name="com.blankj.utilcode.util.UtilsTransActivity" android:multiprocess="true" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:name="com.blankj.utilcode.util.UtilsFileProvider" android:exported="false" android:authorities="com.huiruan.zjt.utilcode.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <service android:name="com.blankj.utilcode.util.MessengerUtils.ServerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.huiruan.zjt.messenger"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.liulishuo.okdownload.OkDownloadProvider" android:exported="false" android:authorities="com.huiruan.zjt.com.liulishuo.okdownload"/>
+        <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="singleInstance"/>
+        <activity android:theme="@style/Theme.PlayCore.Transparent" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11003"/>
+        </service>
+        <service android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService" android:enabled="false" android:exported="false"/>
+    </application>
+</manifest>
